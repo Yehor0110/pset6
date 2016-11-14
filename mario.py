@@ -1,6 +1,6 @@
 def triangle():
     while True:
-        height = int(input("Height: "))
+        height = int(input("Enter height: "))
         if 0 < height < 23:
             for r in range(1, height+1):
                 for s in range(height - r, 0, -1):
