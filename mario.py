@@ -1,4 +1,4 @@
-def triangle():
+def pyramid():
     while True:
         height = int(input("Enter height: "))
         if 0 < height < 23:
@@ -9,4 +9,4 @@ def triangle():
                     print("#", sep=' ', end='')
                 print()
             break
-triangle()
+pyramid()
