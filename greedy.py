@@ -1,31 +1,31 @@
 def main():
     while True:
-        change = float(input("Enter the sum: "))
-        if change >= 0:
+        summa = float(input("Enter the sum: "))
+        if summa >= 0:
             break
 
-    change_cents = int(round(change * 100))
-    coin_count = 0
-    while change_cents > 0:
-        if (change_cents - 25) >= 0: 
+    change = int(round(summa * 100))
+    coins = 0
+    while change > 0:
+        if (change - 25) >= 0: 
          
-            change_cents = change_cents - 25 
-            coin_count +=1
+            change = change - 25 
+            coins +=1
         
-        elif (change_cents - 10) >= 0:
+        elif (change - 10) >= 0:
          
-            change_cents = change_cents - 10
-            coin_count +=1
+            change = change - 10
+            coins +=1
         
-        elif (change_cents - 5) >= 0:
+        elif (change - 5) >= 0:
          
-            change_cents = change_cents - 5
-            coin_count +=1
+            change = change - 5
+            coins +=1
         
-        elif (change_cents - 1) >= 0:
+        elif (change - 1) >= 0:
          
-            change_cents = change_cents - 1 
-            coin_count +=1 
+            change = change - 1 
+            coins +=1 
                
-    print(coin_count) 
+    print(coins) 
 main()    
