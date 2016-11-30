@@ -28,4 +28,5 @@ def main():
             coins +=1 
                
     print(coins) 
-main()    
+if __name__ == "__main__":
+    main()    
