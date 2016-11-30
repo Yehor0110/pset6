@@ -1,4 +1,4 @@
-def pyramid():
+def pyrid():
     while True:
         height = int(input("Enter height: "))
         if 0 < height < 23:
@@ -9,4 +9,4 @@ def pyramid():
                     print("#", sep=' ', end='')
                 print()
             break
-pyramid()
+pyrid()
