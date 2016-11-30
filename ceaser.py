@@ -1,22 +1,26 @@
 import sys
-def main():
-    key = 0
-    if len(sys.argv) != 2: 
-        print("Error.. Enter the key(int number) \n")
-        return 1
+import cs50
+
+if len(sys.argv) != 2:
+    print("error")
+    exit(0)
+
+print("plaintext: ", end="")
+text = cs50.get_string()
+
+SIZE = 26
+KEY = int(sys.argv[1])
+
+print("ciphertext: ", end="")
+for i in range (len(text)):
+    if text[i].isalpha():
+        if text[i].isupper():
+            tmp = (ord(text[i]) - ord('A') + KEY) % 26 + ord('A')
+            print(chr(tmp), sep='', end='')
+            
+        elif text[i].islower():
+            tmp = (ord(text[i]) - ord('a') + KEY) % 26 + ord('a')
+            print(chr(tmp), sep='', end='')
     else:
-        key = int(sys.argv[1])
-    text = str(input("plaintext: "))
-    print("ciphertext: ", sep='', end='')
-    for i in range(len(text)):
-        if text[i].isalpha():
-            if text[i].isupper():
-                cipher = (ord(text[i]) - ord('A') + key) % 26 + ord('A')
-                print(chr(cipher), end='')
-            else:
-                cipher = (ord(text[i]) - ord('a') + key) % 26 + ord('a')
-                print(chr(cipher), end='')
-        else:
-            print(text[i], end='')
-    print()
-main()
+        print(text[i], sep='', end='')
+print()
